@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <!-- SET TITLE -->
+    <title>SPINNY BALLS</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet">
+    
+  </head>
+
+
+  <body>
+    <div class="container">
+      <div class="element">
+        <button class="rstButton button" onclick="resetBtn()">Reset</button>
+      </div>
+
+      <div class="element">
+        
+        <div class="tooltip title">Clear Paths
+            <span class="tooltiptext">Tooltip text</span>
+          </div>
+        <label class="switch" >
+            <input type="checkbox" id="clearPaths">
+            <span class="slider"></span>
+        </label>
+      </div>
+
+      <div class="element">
+        <div class="lineElement">
+          <p class="title1">Angle Modulation Ball0</p>
+          <input type="text" id="angleModBall0" name="angleModBall0" placeholder="-1">
+        </div>
+        <!-- <span class="lineElement">
+            <p class="title1">Angle Modulation Ball0</p>
+            <input type="text" id="angleModBall0" name="angleModBall0" placeholder="-1">
+        </span> -->
+      </div>
+
+      <div class="element">
+        <p class="title1">Angle Modulation Ball1</p>
+        <input type="text" id="angleModBall1" name="angleModBall1" placeholder="+1/2">
+      </div>
+
+      <div class="element">
+        <p class="title1">Angle Modulation Ball2</p>
+        <input type="text" id="angleModBall2" name="angleModBall2" placeholder="+1/4">
+        </div>
+
+      <div class="element">
+        <button class="button" onclick="apply()" id="apply">Apply</button>
+      </div>
+
+      <div class="element">
+          <button class="button" onclick="run()">Run</button>
+      </div>
+
+      <div class="element">
+          <p class="title">Continuous</p>
+          <label class="switch" >
+              <input type="checkbox" id="continuous" checked>
+              <span class="slider"></span>
+          </label>
+        </div>
+    </div>
+    
+    <div class="counter">
+      <p id="counter">Counter</p>
+    </div>
+
+    <!-- SET CANVAS SIZE -->
+    <canvas id="myCanvas" width="800" height="800"></canvas>
+    
+    <script src="bignumber.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
